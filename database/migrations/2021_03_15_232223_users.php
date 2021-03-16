@@ -17,7 +17,8 @@ class Users extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('correo');
-            $table->string('dirección');
+            $table->string('direccion');
+            $table->string('contraseña');
         });
     }
 
@@ -28,6 +29,6 @@ class Users extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('productos');
+        Schema::dropIfExists('usuarios');
     }
 }
