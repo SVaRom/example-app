@@ -80,10 +80,10 @@ function Student(){
           }
           const buscar = async (e) =>{
             e.preventDefault()
-            await Axios({
-              method:'get',
-              url:'api/search',
-              data: data.id
+            axios.get('api/search', {
+              params: {
+                id: data.id
+              }
             })
             .then(response=>{
                 console.log('response.data',response.data)
@@ -93,7 +93,6 @@ function Student(){
             .catch(error => {
               console.log('Error Login', error )
             })
-            console.log('hola')
           }
   
           
@@ -146,6 +145,11 @@ function Student(){
           </Form.Group>
       </Form.Row>
       <Form.Row>
+      <Form.Group as={Col}>
+        <Button variant="dark" type="submit" onClick={buscar}>
+          Search
+      </Button>
+        </Form.Group>
         <Form.Group as={Col}>
         <Button variant="dark" type="submit" onClick={handleSubmit}>
           Submit

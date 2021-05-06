@@ -2200,11 +2200,10 @@ function Student() {
           switch (_context3.prev = _context3.next) {
             case 0:
               e.preventDefault();
-              _context3.next = 3;
-              return axios__WEBPACK_IMPORTED_MODULE_3___default()({
-                method: 'get',
-                url: 'api/search',
-                data: data.id
+              axios__WEBPACK_IMPORTED_MODULE_3___default().get('api/search', {
+                params: {
+                  id: data.id
+                }
               }).then(function (response) {
                 console.log('response.data', response.data);
                 setUsuario(response.data);
@@ -2212,10 +2211,7 @@ function Student() {
                 console.log('Error Login', error);
               });
 
-            case 3:
-              console.log('hola');
-
-            case 4:
+            case 2:
             case "end":
               return _context3.stop();
           }
@@ -2292,6 +2288,14 @@ function Student() {
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default.Row, {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default.Group, {
+            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default,
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
+              variant: "dark",
+              type: "submit",
+              onClick: buscar,
+              children: "Search"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default,
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
               variant: "dark",
