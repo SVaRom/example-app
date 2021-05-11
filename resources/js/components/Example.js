@@ -17,7 +17,7 @@ return (
 <Nav className="mr-auto">
 <Nav.Link as = {Link} to="/example-app/public/">Home</Nav.Link>
 <Nav.Link as = {Link} to="/example-app/public/student">Student</Nav.Link>
-<Nav.Link as = {Link} to="/example-app/public/cards">Pricing</Nav.Link>
+<Nav.Link as = {Link} to="/example-app/public/cards">Cards</Nav.Link>
 </Nav>
 <Form inline>
 <FormControl type="text" placeholder="Search" className="mr-sm-2" />
