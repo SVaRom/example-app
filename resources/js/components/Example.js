@@ -7,6 +7,7 @@ import FormControl from 'react-bootstrap/FormControl';
 import { Route, Switch, Link } from 'react-router-dom'
 import Student from './Student'
 import Ejemplillo from './Ejemplillo';
+import Cards from './Cards'
 
 function Example() {
 return (
@@ -16,7 +17,7 @@ return (
 <Nav className="mr-auto">
 <Nav.Link as = {Link} to="/example-app/public/">Home</Nav.Link>
 <Nav.Link as = {Link} to="/example-app/public/student">Student</Nav.Link>
-<Nav.Link href="#pricing">Pricing</Nav.Link>
+<Nav.Link as = {Link} to="/example-app/public/cards">Pricing</Nav.Link>
 </Nav>
 <Form inline>
 <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -24,6 +25,7 @@ return (
 </Form>
 </Navbar>
 <Switch> 
+<Route exact path='/example-app/public/cards' component= {Cards} />
 <Route exact path='/example-app/public/student' component={Student} />
 <Route exact path='/example-app/public/ejemplillo' component={Ejemplillo} />
 </Switch>

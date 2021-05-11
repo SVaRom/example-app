@@ -67,16 +67,6 @@ function Student(){
             .catch(error => {
               console.log('Error Login', error )
             })
-            cont=0
-            for(variable in xd){
-              if(xd[cont].id==data.id){
-                console.log(xd[cont].nombre,'es una puta')
-                console.log(data.add)
-                window.alert(xd[cont].nombre + " es una puta")
-                break;
-              }
-              cont++;
-            }
           }
           const buscar = async (e) =>{
             e.preventDefault()
