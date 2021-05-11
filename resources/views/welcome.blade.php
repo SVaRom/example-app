@@ -16,7 +16,6 @@
 </head>
 
 <body>
-
 <!-- React root DOM -->
 <div id="app">
 </div>
@@ -34,6 +33,5 @@
   crossorigin></script>
 
 <script>var Alert = ReactBootstrap.Alert;</script>
-
 </body>
 </html>
