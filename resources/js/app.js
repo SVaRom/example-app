@@ -12,5 +12,4 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-require('./components/Student');
-require('./components/Example');
+require('./components/index');

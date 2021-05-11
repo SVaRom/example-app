@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import { Form, Button, Container,Row,Col, FormGroup } from 'react-bootstrap';
 import ReactDOM from 'react-dom';
 import Axios from 'axios';
-import { useHistory, Link } from "react-router-dom";
 import axios from 'axios';
+import { Route, Switch, Link,useHistory } from 'react-router-dom'
 
 function Student(){
     
@@ -161,7 +161,7 @@ function Student(){
       </Button>
         </Form.Group>
         <Form.Group as={Col}>
-      <Button variant="dark" type="submit" href="http://localhost/example-app/public/hola">
+      <Button variant="dark" as={Link} to="/example-app/public/ejemplillo">
           Por si nadie te saluda
       </Button>
         </Form.Group>
@@ -172,6 +172,3 @@ function Student(){
       )    
   }
 export default Student;
-if (document.getElementById('student')) {
-  ReactDOM.render( <Student /> , document.getElementById('student'));
-}

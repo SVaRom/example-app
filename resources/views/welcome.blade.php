@@ -18,7 +18,7 @@
 <body>
 
 <!-- React root DOM -->
-<div id="student">
+<div id="app">
 </div>
 
 <!-- React JS -->

@@ -22,4 +22,3 @@ Route::get('/delete',[UsuariosController::class,'destroy']);
 Route::post('/changepass',[UsuariosController::class,'update']);
 Route::get('/token',[UsuariosController::class,'showToken']);
 Route::post('/addUser',[UsuariosController::class,'store']);
-Route::view('/hola','hola')->name('hola'); //El name es para poder invocarlo de otras maneras
