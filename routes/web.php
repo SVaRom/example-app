@@ -22,3 +22,8 @@ Route::get('/delete',[UsuariosController::class,'destroy']);
 Route::post('/changepass',[UsuariosController::class,'update']);
 Route::get('/token',[UsuariosController::class,'showToken']);
 Route::post('/addUser',[UsuariosController::class,'store']);
+Route::view('/student','welcome');
+Route::view('/cards','welcome');
+Route::view('/about','welcome');
+Route::view('/login','welcome');
+Route::view('/indexlogin','welcome');

@@ -55,7 +55,10 @@ class UsuariosController extends Controller
      */
     public function show(Request $request)
     {
-        $usuario = DB::table('usuarios')->where('id', $request->id)->get();
+        $query = DB::table('usuarios')
+            ->select('contraseña')
+            ->where('correo',$request->correo);
+        $usuario=$query->get();
         return $usuario;
     }
 

@@ -51,7 +51,6 @@ function Student(){
         
       const handleAll = async (e) =>{
           e.preventDefault()
-          let xd,variable,cont
          
             await Axios({
               method: 'get',
