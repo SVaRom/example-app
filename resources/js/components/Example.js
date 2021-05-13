@@ -1,17 +1,14 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import Form from 'react-bootstrap/Form';
+import { Form, Button, Container,Row,Col, FormGroup } from 'react-bootstrap';
 import FormControl from 'react-bootstrap/FormControl';
 import { Route, Switch, Link } from 'react-router-dom'
 import Student from './Student'
 import Ejemplillo from './Ejemplillo';
 import Cards from './Cards';
-import inicio from './inicio';
 import about from './about';
 import login from './login';
-import indexlogin from './indexlogin';
 
 function Example() {
 return (
@@ -35,15 +32,8 @@ return (
     <Button variant="outline-light" size="lg"  as = {Link} to="/example-app/public/login">Log in</Button>
     </Form>
 </Navbar>
-<Switch> 
-<Route exact path='/example-app/public/' component= {inicio} />
-<Route exact path='/example-app/public/cards' component= {Cards} />
-<Route exact path='/example-app/public/student' component={Student} />
-<Route exact path='/example-app/public/ejemplillo' component={Ejemplillo} />
-<Route exact path='/example-app/public/about' component={about} />
-<Route exact path='/example-app/public/login' component={login} />
-<Route exact path='/example-app/public/indexlogin' component={indexlogin} />
-</Switch>
+
+<Container>Hola mi amor, soy inicio</Container>
 </div>
 );
 }

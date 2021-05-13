@@ -26,4 +26,4 @@ Route::view('/student','welcome');
 Route::view('/cards','welcome');
 Route::view('/about','welcome');
 Route::view('/login','welcome');
-Route::view('/indexlogin','welcome');
+Route::view('/hola','hola');

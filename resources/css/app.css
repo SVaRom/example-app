@@ -1,0 +1,11 @@
+.jumbotron {
+    background-image: url(../images/ferre.jpg);
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    border-radius: 0.3rem;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  }

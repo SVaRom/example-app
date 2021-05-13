@@ -1,12 +1,15 @@
 import React, {useState} from 'react';
-import { Form, Button, Container,Row,Col, FormGroup } from 'react-bootstrap';
+import { Form, Button, Container,Row,Col, FormGroup,Alert } from 'react-bootstrap';
 import ReactDOM from 'react-dom';
 import Axios from 'axios';
 import axios from 'axios';
-import { Route, Switch, Link,useHistory } from 'react-router-dom'
+import { Route, Switch, Link,useHistory } from 'react-router-dom';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 
 function Student(){
-    
+  const [show, setShow] = useState(false);
+  const [show2, setShow2] = useState(false);
   const [data, setData] = useState({
       id: '',
       nombre: '',
@@ -41,10 +44,12 @@ function Student(){
           config: { headers: {'Content-Type': 'multipart/form-data' }}
           })
           .then(response=>{
+            setShow2(true)
             console.log('Sí')
           })
           .catch(error => {
-            console.log('No\n', error.message )
+            setShow(true)
+            console.log('No\n', error.message ) 
           })
           
         }
@@ -83,81 +88,58 @@ function Student(){
               console.log('Error Login', error )
             })
           }
-  
-          
   return (
-  <Container>
-  <Row>
-      <Form>
-      <Form.Row>
-          <Form.Group as={Col} controlId="formGridId">
-          <Form.Label>ID</Form.Label>
-          <Form.Control 
-              type="text" 
-              name="id"
-              placeholder="Enter id"
-              
-              onChange={handleInputChange}
-              />
-          </Form.Group>
-          <Form.Group as={Col} controlId="formGridName">
-          <Form.Label>Name</Form.Label>
-          <Form.Control 
-              type="text"
-              name="nombre"
-              placeholder="Enter your name"
-             
-              onChange={handleInputChange}
-              />
-          </Form.Group>
-      </Form.Row>
-      <Form.Row>
-      <Form.Group as={Col} controlId="formGridEmail">
-          <Form.Label>Email</Form.Label>
-          <Form.Control type="email" name="correo" placeholder="Enter email" onChange={handleInputChange}/>
-      </Form.Group>
-      </Form.Row>
-      <Form.Group controlId="formGridAddress">
-          <Form.Label>Address</Form.Label>
-          <Form.Control name="direccion" placeholder="Apartment, studio, or floor" onChange={handleInputChange}/>
-      </Form.Group>
-      <Form.Row>
-          <Form.Group as={Col} controlId="formGridPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-              type="password"  
-              name="contraseña"
-              placeholder="The secret words"
-              
-              onChange={handleInputChange}
-              />
-          </Form.Group>
-      </Form.Row>
-      <Form.Row>
-      <Form.Group as={Col}>
-        <Button variant="dark" type="submit" onClick={buscar}>
-          Search
-      </Button>
-        </Form.Group>
-        <Form.Group as={Col}>
-        <Button variant="dark" type="submit" onClick={handleSubmit}>
-          Submit
-      </Button>
-        </Form.Group>
-        <Form.Group as={Col}>
-        <Button variant="dark" type="submit" onClick={handleAll}>
-          User
-      </Button>
-        </Form.Group>
-        <Form.Group as={Col}>
-      <Button variant="dark" as={Link} to="/example-app/public/ejemplillo">
-          Por si nadie te saluda
-      </Button>
-        </Form.Group>
-      </Form.Row>
-      </Form>
-      </Row>
-      </Container>
+    <div>
+    <Navbar bg="dark" variant="dark">
+    <Navbar.Brand href="/example-app/public/">
+    <img
+            src="images/logo.png"
+            width="53"
+            height="60"
+            className="d-inline-block align-top"
+          />
+    </Navbar.Brand>
+    <Nav className="mr-auto">
+    <Nav.Link as = {Link} to="/example-app/public/">Home</Nav.Link>
+    <Nav.Link as = {Link} to="/example-app/public/student">Student</Nav.Link>
+    <Nav.Link as = {Link} to="/example-app/public/cards">Cards</Nav.Link>
+    <Nav.Link as = {Link} to="/example-app/public/about">About us</Nav.Link>
+    </Nav>
+    <Form inline>
+        <Button variant="outline-light" size="lg"  as = {Link} to="/example-app/public/login">Log in</Button>
+        </Form>
+    </Navbar>
+    <Alert show={show} variant="danger" onClose={() => setShow(false)} dismissible>
+      <center><Alert.Heading>No se pudo hacer el registro</Alert.Heading>
+                <p>
+                  Verifica tus datos, el registro no se pudo procesar.
+                  <br/>
+                  Intenta cambiando el ID o el email
+                </p></center>
+              </Alert>
+              <Alert show={show2} variant="success" onClose={() => setShow2(false)} dismissible>
+      <center><Alert.Heading>Registro exitoso</Alert.Heading></center>
+              </Alert>
+      <Container>
+<div className="wrapper fadeInDown">
+  <div id="formContent">
+  <div className="fadeIn first">
+    <h1>Registrate</h1>
+    </div>
+    <form onSubmit={handleSubmit}>
+    <input type="text"  className="fadeIn second" name="id" placeholder="id" onChange={handleInputChange}/>
+      <input type="text"className="fadeIn third" name="nombre" placeholder="name" onChange={handleInputChange}/>
+    <input type="email"  className="fadeIn fourth" name="correo" placeholder="email" onChange={handleInputChange}/>
+    <input type="text"className="fadeIn fifth" name="direccion" placeholder="address" onChange={handleInputChange}/>
+      <input type="password"className="fadeIn sixth" name="contraseña" placeholder="password" onChange={handleInputChange}/>
+      <input type="submit" className="fadeIn seventh" value="Sign in"/>
+    </form>
+  </div>
+  </div>
+</Container>
+
+    </div>
+  
       )    
   }
 export default Student;

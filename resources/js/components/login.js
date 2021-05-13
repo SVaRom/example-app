@@ -4,8 +4,10 @@ import ReactDOM from 'react-dom';
 import Axios from 'axios';
 import axios from 'axios';
 import { Route, Switch, Link,useHistory } from 'react-router-dom'
-
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 function login(){
+  
     
     const [data, setData] = useState({
         correo: '',
@@ -33,7 +35,7 @@ function login(){
             .then(response=>{
                 if(data.contraseña==response.data[0].contraseña){
                     window.alert("Login successfull! c:");
-                    location.href="/example-app/public/indexlogin";
+                    location.pathname="/example-app/public/hola";
                 }else{
                     window.alert("Login unsuccessfull! :c");
                 }
@@ -43,31 +45,45 @@ function login(){
   
           
   return (
-  <Container>
-  <Row>
-      <Form>
-      <Form.Row>
-      <Form.Group as={Col} controlId="formGridEmail">
-          <Form.Label>Email</Form.Label>
-          <Form.Control type="email" name="correo" placeholder="Enter email" onChange={handleInputChange}/>
-      </Form.Group>
-      </Form.Row>
-      <Form.Row>
-          <Form.Group as={Col} controlId="formGridPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" name="contraseña" placeholder="The secret words" onChange={handleInputChange}/>
-          </Form.Group>
-      </Form.Row>
-      <Form.Row>
-      <Form.Group as={Col}>
-        <Button variant="dark" type="submit" onClick={handleAll}>
-        Login
-        </Button>
-        </Form.Group>
-      </Form.Row>
-      </Form>
-      </Row>
-      </Container>
+    <div>
+<Navbar bg="dark" variant="dark">
+<Navbar.Brand href="/example-app/public/">
+<img
+        src="images/logo.png"
+        width="53"
+        height="60"
+        className="d-inline-block align-top"
+      />
+</Navbar.Brand>
+<Nav className="mr-auto">
+<Nav.Link as = {Link} to="/example-app/public/">Home</Nav.Link>
+<Nav.Link as = {Link} to="/example-app/public/student">Student</Nav.Link>
+<Nav.Link as = {Link} to="/example-app/public/cards">Cards</Nav.Link>
+<Nav.Link as = {Link} to="/example-app/public/about">About us</Nav.Link>
+</Nav>
+</Navbar>
+
+<Container>
+<div className="wrapper fadeInDown">
+  <div id="formContent">
+  <div className="fadeIn first">
+    <h1>Inicia sesión</h1>
+    </div>
+    <form>
+    <input type="email"  className="fadeIn second" name="correo" placeholder="email" onChange={handleInputChange}/>
+      <input type="password"className="fadeIn third" name="contraseña" placeholder="password" onChange={handleInputChange}/>
+      <input type="submit" className="fadeIn fourth" value="Log In" onClick={handleAll}/>
+    </form>
+    <div id="formFooter">
+      <a className="underlineHover" href="#">Forgot Password?</a>
+      <br/>
+      <a className="underlineHover" href="#">Sign in</a>
+    </div>
+  </div>
+  </div>
+</Container>
+</div>
+   
       )    
   }
 export default login;

@@ -1,8 +1,10 @@
 import React,  {useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import Axios from 'axios'
-import Container from 'react-bootstrap/Container';
+import { Route, Switch, Link,useHistory } from 'react-router-dom';
+import { Form, Button, Container,Row,Col, FormGroup } from 'react-bootstrap';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 const Cards = props => {
     const [data, setData] = useState([]);
     const [isLoading, setLoading] = useState(false);
@@ -22,7 +24,27 @@ const Cards = props => {
         })();
       }, []);
     return (
-        <Container>
+      <div>
+      <Navbar bg="dark" variant="dark">
+      <Navbar.Brand href="/example-app/public/">
+      <img
+              src="images/logo.png"
+              width="53"
+              height="60"
+              className="d-inline-block align-top"
+            />
+      </Navbar.Brand>
+      <Nav className="mr-auto">
+      <Nav.Link as = {Link} to="/example-app/public/">Home</Nav.Link>
+      <Nav.Link as = {Link} to="/example-app/public/student">Student</Nav.Link>
+      <Nav.Link as = {Link} to="/example-app/public/cards">Cards</Nav.Link>
+      <Nav.Link as = {Link} to="/example-app/public/about">About us</Nav.Link>
+      </Nav>
+      <Form inline>
+          <Button variant="outline-light" size="lg"  as = {Link} to="/example-app/public/login">Log in</Button>
+          </Form>
+      </Navbar>
+      <Container>
         {data.map(dataItem =>(
             <Card style={{ width: '18rem' }} key={dataItem.id}>
             <Card.Img variant="top" src={dataItem.nombre} />
@@ -36,6 +58,8 @@ const Cards = props => {
             </Card>
         ))}
         </Container>
+      </div>
+        
  );
 }
 export default Cards;
