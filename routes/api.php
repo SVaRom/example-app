@@ -21,3 +21,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/usuario',[UsuariosController::class,'index']);
 Route::post('/addUser',[UsuariosController::class,'store']);
 Route::get('/search',[UsuariosController::class,'show']);
+Route::post('/changepass',[UsuariosController::class,'update']);
+Route::get('/delete',[UsuariosController::class,'destroy']);

@@ -83,9 +83,9 @@ class UsuariosController extends Controller
     public function update(Request $request)
     {
         $usuario = DB::table('usuarios')
-              ->where('id', $request->id)
+              ->where('correo', $request->correo)
               ->update(['contraseña' => $request->contraseñaNueva]);
-        $usuario = DB::table('usuarios')->where('id', $request->id)->get();
+        $usuario = DB::table('usuarios')->where('correo', $request->correo)->get();
         return $usuario;
     }
 
@@ -100,10 +100,6 @@ class UsuariosController extends Controller
      */
     public function destroy(Request $request)
     {
-        DB::table('usuarios')->where('id', '=', $request->id)->delete();
-        echo "<script>
-        alert('Se ha eliminado al registro con ID:'+$request->id+' correctamente');
-        window.location= 'index.php'
-        </script>";
+        DB::table('usuarios')->where('correo', '=', $request->correo)->delete();
     }
 }

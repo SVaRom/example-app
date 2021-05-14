@@ -4,11 +4,6 @@ import Nav from 'react-bootstrap/Nav';
 import { Form, Button, Container,Row,Col, FormGroup } from 'react-bootstrap';
 import FormControl from 'react-bootstrap/FormControl';
 import { Route, Switch, Link } from 'react-router-dom'
-import Student from './Student'
-import Ejemplillo from './Ejemplillo';
-import Cards from './Cards';
-import about from './about';
-import login from './login';
 
 function Example() {
 return (

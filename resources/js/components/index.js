@@ -8,6 +8,7 @@ import Ejemplillo from './Ejemplillo';
 import Cards from './Cards';
 import about from './about';
 import login from './login';
+import change from './change';
 ReactDOM.render (
 (
     <BrowserRouter>
@@ -20,6 +21,7 @@ ReactDOM.render (
                 <Route exact path='/example-app/public/ejemplillo' component={Ejemplillo} />
                 <Route exact path='/example-app/public/about' component={about} />
                 <Route exact path='/example-app/public/login' component={login} />
+                <Route exact path='/example-app/public/change' component={change} />
             </Switch>
         </Router>
     </BrowserRouter>

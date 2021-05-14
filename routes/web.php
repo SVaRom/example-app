@@ -28,3 +28,4 @@ Route::view('/about','welcome');
 Route::view('/login','welcome');
 Route::view('/ejemplillo','welcome');
 Route::view('/hola','welcome');
+Route::view('/change','welcome');

@@ -79,7 +79,7 @@ function login(){
       <input type="submit" className="fadeIn fourth" value="Log In" onClick={handleAll}/>
     </form>
     <div id="formFooter">
-      <a className="underlineHover" href="#">Forgot Password?</a>
+      <a className="underlineHover" href="/example-app/public/change">Forgot Password?</a>
       <br/>
       <a className="underlineHover" href="/example-app/public/student">Create account</a>
     </div>

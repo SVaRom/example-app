@@ -53,41 +53,6 @@ function Student(){
           })
           
         }
-        
-      const handleAll = async (e) =>{
-          e.preventDefault()
-         
-            await Axios({
-              method: 'get',
-              url: 'api/usuario'
-            
-            })
-            .then(response=>{
-              xd=response.data
-                console.log('response.data',response.data)
-                setUsuario(response.data)
-                
-            })
-            .catch(error => {
-              console.log('Error Login', error )
-            })
-          }
-          const buscar = async (e) =>{
-            e.preventDefault()
-            axios.get('api/search', {
-              params: {
-                id: data.id
-              }
-            })
-            .then(response=>{
-                console.log('response.data',response.data)
-                setUsuario(response.data)
-                
-            })
-            .catch(error => {
-              console.log('Error Login', error )
-            })
-          }
   return (
     <div>
     <Navbar bg="dark" variant="dark">
