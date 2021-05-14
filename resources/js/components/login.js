@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Form, Button, Container,Row,Col, FormGroup } from 'react-bootstrap';
+import { Form, Button, Container,Row,Col, FormGroup,Alert } from 'react-bootstrap';
 import ReactDOM from 'react-dom';
 import Axios from 'axios';
 import axios from 'axios';
@@ -7,7 +7,7 @@ import { Route, Switch, Link,useHistory } from 'react-router-dom'
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 function login(){
-  
+  const [show, setShow] = useState(false);
     
     const [data, setData] = useState({
         correo: '',
@@ -34,10 +34,9 @@ function login(){
             })
             .then(response=>{
                 if(data.contraseña==response.data[0].contraseña){
-                    window.alert("Login successfull! c:");
                     location.pathname="/example-app/public/hola";
                 }else{
-                    window.alert("Login unsuccessfull! :c");
+                    setShow(true)
                 }
                 
             })
@@ -62,7 +61,12 @@ function login(){
 <Nav.Link as = {Link} to="/example-app/public/about">About us</Nav.Link>
 </Nav>
 </Navbar>
-
+<Alert show={show} variant="danger" onClose={() => setShow(false)} dismissible>
+      <center><Alert.Heading>No se pudo iniciar sesión</Alert.Heading>
+                <p>
+                  Verifica si tus datos son correctos, de lo contrario comunicate con nosotros.
+                </p></center>
+              </Alert>
 <Container>
 <div className="wrapper fadeInDown">
   <div id="formContent">
@@ -77,7 +81,7 @@ function login(){
     <div id="formFooter">
       <a className="underlineHover" href="#">Forgot Password?</a>
       <br/>
-      <a className="underlineHover" href="#">Sign in</a>
+      <a className="underlineHover" href="/example-app/public/student">Create account</a>
     </div>
   </div>
   </div>

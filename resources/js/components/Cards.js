@@ -44,16 +44,12 @@ const Cards = props => {
           <Button variant="outline-light" size="lg"  as = {Link} to="/example-app/public/login">Log in</Button>
           </Form>
       </Navbar>
-      <Container>
+      <Container margin='auto'>
         {data.map(dataItem =>(
             <Card style={{ width: '18rem' }} key={dataItem.id}>
-            <Card.Img variant="top" src={dataItem.nombre} />
             <Card.Body>
                 <Card.Title>{dataItem.correo}</Card.Title>
-                <Card.Text>
-                {dataItem.direccion}
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <Card.Text>{dataItem.direccion}</Card.Text>
             </Card.Body>
             </Card>
         ))}

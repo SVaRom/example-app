@@ -26,9 +26,8 @@ function about(){
 </Navbar>
 
 <Container>
-            <Jumbotron></Jumbotron>
+            <Jumbotron/>
             A lo largo de los años "Ferretería Armando" ha ganado prestigio entre las ferreterías, fundada en 1997 el carisma de "Don Roma" ha logrado atrapar varios clientes a lo largo del tiempo. 
-      
         </Container>
 </div>
     )

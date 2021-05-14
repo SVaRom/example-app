@@ -124,7 +124,7 @@ function Student(){
 <div className="wrapper fadeInDown">
   <div id="formContent">
   <div className="fadeIn first">
-    <h1>Registrate</h1>
+    <h1>Create account</h1>
     </div>
     <form onSubmit={handleSubmit}>
     <input type="text"  className="fadeIn second" name="id" placeholder="id" onChange={handleInputChange}/>
