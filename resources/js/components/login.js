@@ -27,19 +27,22 @@ function login(){
  
           const handleAll = async (e) =>{
             e.preventDefault();
-            axios.get('api/search', {
-              params: {
-                correo: data.correo
-              }
-            })
-            .then(response=>{
-                if(data.contraseña==response.data[0].contraseña){
-                    location.pathname="/example-app/public/hola";
-                }else{
-                    setShow(true)
+              axios.get('api/search', {
+                params: {
+                  correo: data.correo
                 }
-                
-            })
+              })
+              .then(response=>{
+                  if(data.contraseña==response.data[0].contraseña){
+                      location.pathname="/example-app/public/hola";
+                  }else{
+                      setShow(true)
+                  }
+                  
+              }).catch(error => {
+                setShow(true)
+              })
+            
           }
   
           

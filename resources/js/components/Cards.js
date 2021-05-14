@@ -2,7 +2,7 @@ import React,  {useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import Axios from 'axios'
 import { Route, Switch, Link,useHistory } from 'react-router-dom';
-import { Form, Button, Container,Row,Col, FormGroup } from 'react-bootstrap';
+import { Form, Button, Container,Row,Col, FormGroup,CardDeck } from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 const Cards = props => {
@@ -45,14 +45,21 @@ const Cards = props => {
           </Form>
       </Navbar>
       <Container margin='auto'>
+      <CardDeck>
         {data.map(dataItem =>(
-            <Card style={{ width: '18rem' }} key={dataItem.id}>
+          
+            <Card style={{ width: '18rem' }} background-size="contain" key={dataItem.id}>
+              <Card.Img variant="top" src="images/logo.png" />
             <Card.Body>
                 <Card.Title>{dataItem.correo}</Card.Title>
                 <Card.Text>{dataItem.direccion}</Card.Text>
             </Card.Body>
+            <Card.Footer>
+              {dataItem.contraseña}
+            </Card.Footer>
             </Card>
         ))}
+        </CardDeck>
         </Container>
       </div>
         
