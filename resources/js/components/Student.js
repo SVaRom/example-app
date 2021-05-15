@@ -9,7 +9,6 @@ import Nav from 'react-bootstrap/Nav';
 
 function Student(){
   const [show, setShow] = useState(false);
-  const [show2, setShow2] = useState(false);
   const [data, setData] = useState({
       id: '',
       nombre: '',
@@ -44,8 +43,8 @@ function Student(){
           config: { headers: {'Content-Type': 'multipart/form-data' }}
           })
           .then(response=>{
-            setShow2(true)
             console.log('Sí')
+            location.pathname="/example-app/public/hola";
           })
           .catch(error => {
             setShow(true)
@@ -67,7 +66,6 @@ function Student(){
     <Nav className="mr-auto">
     <Nav.Link as = {Link} to="/example-app/public/">Home</Nav.Link>
     <Nav.Link as = {Link} to="/example-app/public/student">Student</Nav.Link>
-    <Nav.Link as = {Link} to="/example-app/public/cards">Cards</Nav.Link>
     <Nav.Link as = {Link} to="/example-app/public/about">About us</Nav.Link>
     </Nav>
     <Form inline>
@@ -81,9 +79,6 @@ function Student(){
                   <br/>
                   Intenta cambiando el ID o el email
                 </p></center>
-              </Alert>
-              <Alert show={show2} variant="success" onClose={() => setShow2(false)} dismissible>
-      <center><Alert.Heading>Registro exitoso</Alert.Heading></center>
               </Alert>
       <Container>
 <div className="wrapper fadeInDown">

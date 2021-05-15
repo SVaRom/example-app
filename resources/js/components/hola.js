@@ -5,6 +5,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom'
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+
 function Hola(){
     const [show, setShow] = useState(false);
     const [show2, setShow2] = useState(false);
@@ -41,17 +42,22 @@ function Hola(){
   
     return(
         <div>
-<Navbar bg="dark" variant="dark">
-<Navbar.Brand href="/example-app/public/hola">
-<img
-        src="images/logo.png"
-        width="53"
-        height="60"
-        className="d-inline-block align-top"
-      />
-      Login zorra de mierda
-</Navbar.Brand>
-</Navbar>
+ <Navbar bg="dark" variant="dark">
+      <Navbar.Brand href="/example-app/public/">
+      <img
+              src="images/logo.png"
+              width="53"
+              height="60"
+              className="d-inline-block align-top"
+            />
+      </Navbar.Brand>
+      <Nav className="mr-auto">
+      <Nav.Link as = {Link} to="/example-app/public/Hola">Home</Nav.Link>
+      </Nav>
+      <Form inline>
+          <Button variant="outline-light" size="lg"  as = {Link} to="/example-app/public/login">Log out</Button>
+          </Form>
+      </Navbar>
 <Alert show={show} variant="danger" onClose={() => setShow(false)} dismissible>
       <center><Alert.Heading>No se pudo eliminar</Alert.Heading></center>
 </Alert>

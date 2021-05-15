@@ -8,7 +8,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 function login(){
   const [show, setShow] = useState(false);
-    
     const [data, setData] = useState({
         correo: '',
         contraseña:''
@@ -44,7 +43,6 @@ function login(){
               })
             
           }
-  
           
   return (
     <div>
@@ -60,7 +58,6 @@ function login(){
 <Nav className="mr-auto">
 <Nav.Link as = {Link} to="/example-app/public/">Home</Nav.Link>
 <Nav.Link as = {Link} to="/example-app/public/student">Student</Nav.Link>
-<Nav.Link as = {Link} to="/example-app/public/cards">Cards</Nav.Link>
 <Nav.Link as = {Link} to="/example-app/public/about">About us</Nav.Link>
 </Nav>
 </Navbar>

@@ -15,13 +15,13 @@ ReactDOM.render (
         <Router>
             <Switch>
                 <Route exact path="/example-app/public/" component={Example}/>
-                <Route exact path="/example-app/public/hola" component={Hola}/>
                 <Route exact path='/example-app/public/cards' component= {Cards} />
                 <Route exact path='/example-app/public/student' component={Student} />
                 <Route exact path='/example-app/public/ejemplillo' component={Ejemplillo} />
                 <Route exact path='/example-app/public/about' component={about} />
                 <Route exact path='/example-app/public/login' component={login} />
                 <Route exact path='/example-app/public/change' component={change} />
+                <Route exact path="/example-app/public/hola" component={Hola}/>
             </Switch>
         </Router>
     </BrowserRouter>

@@ -62,7 +62,6 @@ function change(){
 <Nav className="mr-auto">
 <Nav.Link as = {Link} to="/example-app/public/">Home</Nav.Link>
 <Nav.Link as = {Link} to="/example-app/public/student">Student</Nav.Link>
-<Nav.Link as = {Link} to="/example-app/public/cards">Cards</Nav.Link>
 <Nav.Link as = {Link} to="/example-app/public/about">About us</Nav.Link>
 </Nav>
 <Form inline>
@@ -73,7 +72,7 @@ function change(){
       <center><Alert.Heading>No se pudo cambiar la contraseña</Alert.Heading></center>
 </Alert>
 <Alert show={show2} variant="success" onClose={() => setShow2(false)} dismissible>
-      <center><Alert.Heading>Cambio exitoso</Alert.Heading></center>
+      <center><Alert.Heading>Cambio exitoso, porfavor vuelva a iniciar sesión</Alert.Heading></center>
 </Alert>
 <Container>
 <div className="wrapper fadeInDown">

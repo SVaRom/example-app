@@ -2278,25 +2278,13 @@ var Cards = function Cards(props) {
           height: "60",
           className: "d-inline-block align-top"
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_5__.default, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_5__.default, {
         className: "mr-auto",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_5__.default.Link, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_5__.default.Link, {
           as: react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Link,
-          to: "/example-app/public/",
+          to: "/example-app/public/Hola",
           children: "Home"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_5__.default.Link, {
-          as: react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Link,
-          to: "/example-app/public/student",
-          children: "Student"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_5__.default.Link, {
-          as: react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Link,
-          to: "/example-app/public/cards",
-          children: "Cards"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_5__.default.Link, {
-          as: react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Link,
-          to: "/example-app/public/about",
-          children: "About us"
-        })]
+        })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
         inline: true,
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default, {
@@ -2304,7 +2292,7 @@ var Cards = function Cards(props) {
           size: "lg",
           as: react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Link,
           to: "/example-app/public/login",
-          children: "Log in"
+          children: "Log out"
         })
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
@@ -2396,10 +2384,6 @@ function Ejemplillo() {
           children: "Student"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_5__.default.Link, {
           as: react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Link,
-          to: "/example-app/public/cards",
-          children: "Cards"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_5__.default.Link, {
-          as: react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Link,
           to: "/example-app/public/about",
           children: "About us"
         })]
@@ -2483,10 +2467,6 @@ function Example() {
           as: react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link,
           to: "/example-app/public/student",
           children: "Student"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_3__.default.Link, {
-          as: react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link,
-          to: "/example-app/public/cards",
-          children: "Cards"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_3__.default.Link, {
           as: react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link,
           to: "/example-app/public/about",
@@ -2578,26 +2558,21 @@ function Student() {
       show = _useState2[0],
       setShow = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
-      _useState4 = _slicedToArray(_useState3, 2),
-      show2 = _useState4[0],
-      setShow2 = _useState4[1];
-
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)({
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)({
     id: '',
     nombre: '',
     correo: '',
     direccion: '',
     contraseña: ''
   }),
-      _useState6 = _slicedToArray(_useState5, 2),
-      data = _useState6[0],
-      setData = _useState6[1];
+      _useState4 = _slicedToArray(_useState3, 2),
+      data = _useState4[0],
+      setData = _useState4[1];
 
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
-      _useState8 = _slicedToArray(_useState7, 2),
-      Usuario = _useState8[0],
-      setUsuario = _useState8[1];
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
+      _useState6 = _slicedToArray(_useState5, 2),
+      Usuario = _useState6[0],
+      setUsuario = _useState6[1];
 
   var handleInputChange = function handleInputChange(event) {
     // console.log(event.target.name)
@@ -2630,8 +2605,8 @@ function Student() {
                   }
                 }
               }).then(function (response) {
-                setShow2(true);
                 console.log('Sí');
+                location.pathname = "/example-app/public/hola";
               })["catch"](function (error) {
                 setShow(true);
                 console.log('No\n', error.message);
@@ -2674,10 +2649,6 @@ function Student() {
           children: "Student"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_6__.default.Link, {
           as: react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link,
-          to: "/example-app/public/cards",
-          children: "Cards"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_6__.default.Link, {
-          as: react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link,
           to: "/example-app/public/about",
           children: "About us"
         })]
@@ -2704,18 +2675,6 @@ function Student() {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
           children: ["Verifica tus datos, el registro no se pudo procesar.", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), "Intenta cambiando el ID o el email"]
         })]
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
-      show: show2,
-      variant: "success",
-      onClose: function onClose() {
-        return setShow2(false);
-      },
-      dismissible: true,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("center", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Heading, {
-          children: "Registro exitoso"
-        })
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
@@ -2824,10 +2783,6 @@ function about() {
           as: react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link,
           to: "/example-app/public/student",
           children: "Student"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_2__.default.Link, {
-          as: react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link,
-          to: "/example-app/public/cards",
-          children: "Cards"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_2__.default.Link, {
           as: react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link,
           to: "/example-app/public/about",
@@ -3009,10 +2964,6 @@ function change() {
           children: "Student"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_6__.default.Link, {
           as: react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link,
-          to: "/example-app/public/cards",
-          children: "Cards"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_6__.default.Link, {
-          as: react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link,
           to: "/example-app/public/about",
           children: "About us"
         })]
@@ -3047,7 +2998,7 @@ function change() {
       dismissible: true,
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("center", {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Heading, {
-          children: "Cambio exitoso"
+          children: "Cambio exitoso, porfavor vuelva a iniciar sesi\xF3n"
         })
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default, {
@@ -3104,12 +3055,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Alert.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Form.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Button.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Alert.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap/Navbar */ "./node_modules/react-bootstrap/esm/Navbar.js");
+/* harmony import */ var react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap/Nav */ "./node_modules/react-bootstrap/esm/Nav.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
@@ -3207,19 +3162,35 @@ function Hola() {
   }();
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_5__.default, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_5__.default, {
       bg: "dark",
       variant: "dark",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_5__.default.Brand, {
-        href: "/example-app/public/hola",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_5__.default.Brand, {
+        href: "/example-app/public/",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
           src: "images/logo.png",
           width: "53",
           height: "60",
           className: "d-inline-block align-top"
-        }), "Login zorra de mierda"]
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default, {
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_6__.default, {
+        className: "mr-auto",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_6__.default.Link, {
+          as: react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link,
+          to: "/example-app/public/Hola",
+          children: "Home"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default, {
+        inline: true,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
+          variant: "outline-light",
+          size: "lg",
+          as: react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link,
+          to: "/example-app/public/login",
+          children: "Log out"
+        })
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
       show: show,
       variant: "danger",
       onClose: function onClose() {
@@ -3227,11 +3198,11 @@ function Hola() {
       },
       dismissible: true,
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("center", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default.Heading, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Heading, {
           children: "No se pudo eliminar"
         })
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
       show: show2,
       variant: "success",
       onClose: function onClose() {
@@ -3239,11 +3210,11 @@ function Hola() {
       },
       dismissible: true,
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("center", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default.Heading, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Heading, {
           children: "Eliminaci\xF3n exitosa"
         })
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: "wrapper fadeInDown",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
@@ -3321,10 +3292,6 @@ react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime
         component: _Example__WEBPACK_IMPORTED_MODULE_2__.default
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Route, {
         exact: true,
-        path: "/example-app/public/hola",
-        component: _hola__WEBPACK_IMPORTED_MODULE_3__.default
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Route, {
-        exact: true,
         path: "/example-app/public/cards",
         component: _Cards__WEBPACK_IMPORTED_MODULE_6__.default
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Route, {
@@ -3347,6 +3314,10 @@ react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime
         exact: true,
         path: "/example-app/public/change",
         component: _change__WEBPACK_IMPORTED_MODULE_9__.default
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Route, {
+        exact: true,
+        path: "/example-app/public/hola",
+        component: _hola__WEBPACK_IMPORTED_MODULE_3__.default
       })]
     })
   })
@@ -3493,10 +3464,6 @@ function login() {
           as: react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link,
           to: "/example-app/public/student",
           children: "Student"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_6__.default.Link, {
-          as: react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link,
-          to: "/example-app/public/cards",
-          children: "Cards"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_6__.default.Link, {
           as: react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link,
           to: "/example-app/public/about",

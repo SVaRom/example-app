@@ -17,7 +17,6 @@ function about(){
 <Nav className="mr-auto">
 <Nav.Link as = {Link} to="/example-app/public/">Home</Nav.Link>
 <Nav.Link as = {Link} to="/example-app/public/student">Student</Nav.Link>
-<Nav.Link as = {Link} to="/example-app/public/cards">Cards</Nav.Link>
 <Nav.Link as = {Link} to="/example-app/public/about">About us</Nav.Link>
 </Nav>
 <Form inline>

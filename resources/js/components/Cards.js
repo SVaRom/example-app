@@ -35,13 +35,10 @@ const Cards = props => {
             />
       </Navbar.Brand>
       <Nav className="mr-auto">
-      <Nav.Link as = {Link} to="/example-app/public/">Home</Nav.Link>
-      <Nav.Link as = {Link} to="/example-app/public/student">Student</Nav.Link>
-      <Nav.Link as = {Link} to="/example-app/public/cards">Cards</Nav.Link>
-      <Nav.Link as = {Link} to="/example-app/public/about">About us</Nav.Link>
+      <Nav.Link as = {Link} to="/example-app/public/Hola">Home</Nav.Link>
       </Nav>
       <Form inline>
-          <Button variant="outline-light" size="lg"  as = {Link} to="/example-app/public/login">Log in</Button>
+          <Button variant="outline-light" size="lg"  as = {Link} to="/example-app/public/login">Log out</Button>
           </Form>
       </Navbar>
       <Container margin='auto'>
